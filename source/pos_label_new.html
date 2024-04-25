@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    #pos_bill{
+        width: 65mm;
+    }
+
+    *{
+        padding: 0;
+        margin: 0;
+        font-size: 10px;
+    }
+    
+    .posbill{
+        width: 65mm; 
+        font-size: 12px;
+    }
+    
+    .company-details{
+        width: 100%;
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-weight: bold;
+        line-height: 10pt;
+    }
+    
+    .bill-header{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .margin-1{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    table{
+        width: 100%;
+        display: grid;
+    }
+    
+    .thead{
+        margin-top: 15px;
+        margin-bottom: 5px;
+        border-top: 1px dashed black;
+        border-bottom: 1px dashed black;
+    }
+    
+    .body_content{
+        border-bottom: 1px dashed black;
+        padding-bottom: 5px;
+    }
+    
+    .row{
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+    
+    .col{
+        width: 15%;
+    }
+    
+    .col-b{
+        width: 35%;
+    }
+    
+    .col-t{
+        width: 20%;
+        text-align: end;
+    }
+    
+    .total > .row{
+        padding-top: 10px;
+        text-align: left;
+    }
+    
+    .discount{
+        border-top: 1px dashed black;
+        padding-top: 5px;
+        border-bottom: 1px dashed black;
+    }
+    
+    .tamount{
+        padding-top: 5px;
+        border-bottom: 1px dashed black;
+    }
+    
+    
+    .end-text{
+        text-align: center;
+        padding-top: 5px;
+    }
+    
+    .space-extra{
+        margin-top: 5px;
+    }
+    
+    .top-header{
+        text-align: end;
+    }
+    .top-header>p{
+        margin: 0px;
+        padding: 0px;
+    }
+    </style>
+</head>
+<body>
+    <div class="posbill" id="pos_bill">
+        <div class="company-details" style="font-size: 12px;">
+            <p>STAAN</p>
+            <p>190-A Bharathiyar Road,</p>
+            <p>Ganapathy, Coimbatore-641006, TN, India</p>
+            <p class="space-extra" >www.staan.in</p>
+            <p class="space-extra"> ESTIMATE</p>
+            <p class="space-extra"> </p>
+        </div>
+        <div class="pos-header">
+            <div class="bill-header margin-1">
+                <p>Bill No: PS001</p>
+                <p>Date: 12-01-2024</p>
+            </div>
+            <div class="">
+                <p>Name: TEST PV</p>
+            </div>
+            <div class=""  >
+                
+                    <p></p>
+                
+            </div>
+            <div class="margin-1">
+                
+            </div>
+            
+                <div class="margin-1">
+                    <p>Mobile : 9632587410</p>
+                </div>
+            
+            <div class="margin-1 bill-header">
+                
+            </div>
+          
+        </div>
+        <div>
+            <table>
+                <tr class="row thead">
+                    <th class="col">S.No</th>
+                    <th class="col-b">Name</th>
+                    <th class="col">Qty</th>
+                    <th class="col">Rate</th>
+                    <th class="col-t">Amount</th>
+                </tr>
+                <tbody class="body_content">
+                    
+                        <tr class="row">
+                            <td class="col">1</td>
+                            <td class="col-b">TEST 01</td>
+                            <td class="col">3</td>
+                            <td class="col">400</td>
+                            <td class="col-t">300</td>
+                        </tr>
+                    
+                </tbody>
+                <tbody class="total">
+                    <tr class="row">
+                        <td class="col">Subtotal</td>
+                        <td class="col-b"></td>
+                        <td class="col">4</td>
+                        <td class="col"></td>
+                        <td class="col-t">2000</td>
+                    </tr>
+                </tbody>
+                <tbody class="discount">
+                    <tr class="row">
+                        <td class="col"></td>
+                        <td class="col"></td>
+                        <td class="col"></td>
+                        <td class="col-b">Discount</td>
+                        <td class="col-t">0.00</td>
+                    </tr>
+                    <tr class="row">
+                        <td class="col"></td>
+                        <td class="col"></td>
+                        <td class="col"></td>
+                        <td class="col-b"></td>
+                        <td class="col-t"></td>
+                    </tr>
+                    <tr class="row">
+                        <td class="col"></td>
+                        <td class="col"></td>
+                        <td class="col"></td>
+                        <td class="col-b">Total After Discount</td>
+                        <td class="col-t"></td>
+                    </tr>
+                </tbody>
+                <tbody class="tamount">
+                    <tr class="row">
+                        <td class="col">Total</td>
+                        <td class="col"></td>
+                        <td class="col"></td>
+                        <td class="col-b"></td>
+                        <td class="col-t">1000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="end-text">Thank You</p>
+    </div>
+</body>
+</html>

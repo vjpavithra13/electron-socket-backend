@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * {
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+}
+
+.label {
+    width: 60mm;
+    font-family: Verdana;
+    font-weight: bold;
+    height: 60%;
+    padding-left: 10mm;
+}
+
+.left-column {
+    float: left;
+    width: 56%;  /* Adjust the width as needed */
+}
+
+.right-column {
+    float: left;
+    width: 20%;  /* Adjust the width as needed */
+}
+
+img {
+    height: 35px;
+    width: 35px;
+}
+
+.posbill{
+    width: '55mm'; 
+    font-size: 12px;
+}
+
+.company-details{
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-weight: bold;
+    line-height: 10pt;
+}
+
+.bill-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.margin-1{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+table{
+    width: 100%;
+    display: grid;
+}
+
+.thead{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border-top: 1px dashed black;
+    border-bottom: 1px dashed black;
+}
+
+.body_content{
+    border-bottom: 1px dashed black;
+    padding-bottom: 5px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.col{
+    width: 15%;
+}
+
+.col-b{
+    width: 35%;
+}
+
+.col-t{
+    width: 20%;
+    text-align: end;
+}
+
+.total > .row{
+    padding-top: 10px;
+    text-align: left;
+}
+
+.discount{
+    border-top: 1px dashed black;
+    padding-top: 5px;
+    border-bottom: 1px dashed black;
+}
+
+.tamount{
+    padding-top: 5px;
+    border-bottom: 1px dashed black;
+}
+
+
+.end-text{
+    text-align: center;
+    padding-top: 5px;
+}
+
+.space-extra{
+    margin-top: 5px;
+}
+
+.top-header{
+    text-align: end;
+}
+.top-header>p{
+    margin: 0px;
+    padding: 0px;
+}
+  </style>
+</head>
+<body>
+  
+<% for (let item of data_list) { %>
+  <div class='label'>
+    <div class='left-column'>
+      <p><%= item.price %></p>
+      <p><%= item.part_code %></p>
+      <p><%= item.part_name %></p>
+    </div>
+    <div class='right-column'>
+      <img src="data:image/png;base64,<%= item.qr_code %>" />
+    </div>
+  </div>
+<% } %>
+
+</body>
+</html>
